@@ -23,3 +23,8 @@ To run the app correctly after you clone the repo, you should do the following:
 * use this import in the files you want to use the Gson in:
 
   >import com.google.gson.Gson;
+
+
+## Lab9
+ The application send GET request to api and show one quote, and save quotes to local json file and show them when offline.
+ this feature uses the Java.net inner dependency in order to get the Json data from an API.
