@@ -11,8 +11,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Random;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
@@ -39,4 +38,18 @@ class AppTest {
         }
 
     }
+
+
+// Test lab9
+    @Test
+    void QuoteAPI() throws Exception {
+        String s = App.quotesAPI("http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en");
+        assertNotNull(s);
+    }
+
+    @Test
+    void throwsExceptionConnecting(){
+        assertThrows(Exception.class,() -> App.quotesAPI("Quotes") );
+    }
+
 }
